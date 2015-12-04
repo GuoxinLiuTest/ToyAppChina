@@ -30,7 +30,8 @@ namespace ToyAppChina.Controllers
 
             var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var result = await userManager.CreateAsync(user, model.Password);
-            return Json(result);
+            //return Json(result);
+            return Content("You have signed up successfully.");
         }
     }
 }
